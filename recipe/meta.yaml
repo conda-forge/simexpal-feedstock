@@ -1,5 +1,5 @@
 {% set name = "simexpal" %}
-{% set version = "1.0" %}
+{% set version = "1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/simexpal-{{ version }}.tar.gz
-  sha256: e5e1f010a25ef8c4b909155125f925934d9306bcc46d2220af4387e2c594ff35
+  sha256: 8146b1b4bfdb3964774d245e30981248acc10359add92c25751cfcbdd110204c
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -23,7 +23,7 @@ requirements:
     - python
     - pyyaml
     - requests
-    - importlib-metadata <5.0 
+    - importlib-metadata <5.0
 
 test:
   imports:
